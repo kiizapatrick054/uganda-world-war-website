@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>World Wars and Uganda</title>
+
+    <style>
+
+        /* =========================
+           GENERAL PAGE
+        ========================== */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+
+            /* ANIMATED GRADIENT BACKGROUND */
+            background: linear-gradient(
+                -45deg,
+                #071952,
+                #088395,
+                #37B5B6,
+                #EBF4F6
+            );
+
+            background-size: 400% 400%;
+            animation: gradientMove 12s ease infinite;
+        }
+
+        @keyframes gradientMove {
+
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(0, 0, 0, 0.75);
+
+            padding: 18px;
+
+            text-align: center;
+
+            backdrop-filter: blur(10px);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+
+            margin: 0 15px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            min-height: 90vh;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 10px;
+
+            text-shadow:
+                0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+        }
+
+        .button {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 15px 30px;
+
+            background: #ffd700;
+
+            color: #111;
+
+            text-decoration: none;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: scale(1.08);
+            background: white;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        section {
+            padding: 70px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+
+            font-size: 40px;
+
+            margin-bottom: 40px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================== */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+            background: rgba(0,0,0,0.65);
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.3);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            color: #ffd700;
+
+            font-size: 25px;
+        }
+
+        .card p {
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           TIMELINE
+        ========================== */
+
+        .timeline {
+            border-left: 4px solid #ffd700;
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding-left: 30px;
+        }
+
+        .event {
+            background: rgba(0,0,0,0.65);
+
+            padding: 25px;
+
+            margin-bottom: 25px;
+
+            border-radius: 15px;
+        }
+
+        .event h3 {
+            color: #ffd700;
+        }
+
+
+        /* =========================
+           FACT BOX
+        ========================== */
+
+        .facts {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 20px;
+        }
+
+        .fact {
+            text-align: center;
+
+            padding: 30px;
+
+            background: rgba(0,0,0,0.65);
+
+            border-radius: 20px;
+        }
+
+        .fact strong {
+            display: block;
+
+            font-size: 35px;
+
+            color: #ffd700;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: rgba(0,0,0,0.85);
+
+            text-align: center;
+
+            padding: 35px;
+        }
+
+        footer p {
+            margin: 8px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            section {
+                padding: 50px 6%;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <a href="#home">Home</a>
+
+    <a href="#ww1">World War I</a>
+
+    <a href="#ww2">World War II</a>
+
+    <a href="#impact">Impact</a>
+
+    <a href="#facts">Facts</a>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <h1>World Wars & Uganda</h1>
+
+    <p>
+        Exploring Uganda's historical experience during
+        World War I and World War II, including military
+        participation, economic effects and social changes.
+    </p>
+
+    <a href="#ww1" class="button">
+        Explore History
+    </a>
+
+</section>
+
+
+
+<!-- =========================
+     INTRODUCTION
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Uganda and the World Wars
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>World War I</h3>
+
+            <p>
+                World War I took place from 1914 to 1918.
+                Uganda was then a British protectorate.
+                People and resources from East Africa
+                became involved in the wider war.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>World War II</h3>
+
+            <p>
+                World War II lasted from 1939 to 1945.
+                Uganda again contributed people,
+                agricultural products and other resources
+                to the British war effort.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>East African Forces</h3>
+
+            <p>
+                The King's African Rifles was a British
+                colonial regiment drawing soldiers from
+                several East African territories, including
+                Uganda.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WORLD WAR I
+========================= -->
+
+<section id="ww1">
+
+    <h2 class="section-title">
+        World War I — 1914–1918
+    </h2>
+
+    <div class="timeline">
+
+        <div class="event">
+
+            <h3>1914 — War begins</h3>
+
+            <p>
+                The First World War began in Europe in
+                1914 but quickly became a global conflict.
+                Fighting also took place in East Africa.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>East African Campaign</h3>
+
+            <p>
+                East Africa became an important theatre
+                of the war. The King's African Rifles
+                participated in military operations in
+                German East Africa.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>Ugandan involvement</h3>
+
+            <p>
+                Uganda contributed personnel and resources
+                within the British colonial system.
+                The wider East African war also affected
+                civilian communities through labour demands,
+                transportation and shortages.
+            </p>
+
+        </div>
+
+
+        <div class="event">
+
+            <h3>1918 — War ends</h3>
+
+            <p>
+                The First World War ended in November 1918.
+                Its economic and social consequences continued
+                to affect East Africa after the fighting ended.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WORLD WAR II
+========================= -->
+
+<section id="ww2">
+
+    <h2 class="section-title">
+        World War II — 1939–1945
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>King's African Rifles</h3>
+
+            <p>
+                The King's African Rifles included units
+                associated with Uganda. The Imperial War
+                Museums records the 4th (Uganda) Battalion
+                and its association with World War II.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Military Service</h3>
+
+            <p>
+                East African troops served in different
+                theatres during World War II. The regiment
+                fought in areas including Madagascar and
+                Burma.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Economic Contribution</h3>
+
+            <p>
+                Uganda's economy was connected to the
+                British wartime system. Agricultural
+                production, transport and labour were
+                important parts of the colonial war effort.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     IMPACT
+========================= -->
+
+<section id="impact">
+
+    <h2 class="section-title">
+        Effects on Uganda
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>1. Military Experience</h3>
+
+            <p>
+                Ugandan and other East African soldiers
+                gained military experience through service
+                in colonial forces.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>2. Economic Effects</h3>
+
+            <p>
+                Wartime demand affected agriculture,
+                trade, transport and labour in Uganda.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>3. Social Effects</h3>
+
+            <p>
+                Recruitment and wartime labour requirements
+                affected families and communities.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>4. Political Awareness</h3>
+
+            <p>
+                The wider experience of colonial service
+                and global conflict formed part of the
+                historical background in which later
+                political developments occurred.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FACTS
+========================= -->
+
+<section id="facts">
+
+    <h2 class="section-title">
+        Quick Facts
+    </h2>
+
+    <div class="facts">
+
+        <div class="fact">
+
+            <strong>1914</strong>
+
+            World War I begins
+
+        </div>
+
+
+        <div class="fact">
+
+            <strong>1918</strong>
+
+            World War I ends
+
+        </div>
+
+
+        <div class="fact">
+
+            <strong>1939</strong>
+
+            World War II begins
+
+        </div>
+
+
+        <div class="fact">
+
+            <strong>1945</strong>
+
+            World War II ends
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     SOURCES
+========================= -->
+
+<section>
+
+    <h2 class="section-title">
+        Sources
+    </h2>
+
+    <div class="card">
+
+        <p>
+            Historical information for this page should be
+            checked against reliable historical collections.
+        </p>
+
+        <p>
+            Imperial War Museums documents the 4th (Uganda)
+            Battalion of the King's African Rifles and its
+            association with World War II.
+        </p>
+
+        <p>
+            Imperial War Museums also documents the wider
+            role of the King's African Rifles in the East
+            African campaigns of the First World War.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h2>World Wars & Uganda</h2>
+
+    <p>
+        Educational history website
+    </p>
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+</body>
+</html>
